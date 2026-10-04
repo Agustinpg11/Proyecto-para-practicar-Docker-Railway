@@ -3,8 +3,7 @@ import random
 import time
 import requests
 
-API_URL = os.getenv("API_URL", "http://localhost:8000")
-
+API_URL = "https://proyecto-para-practicar-docker-railway-production.up.railway.app"
 while True:
     data = {"device_id": "sensor_01", "val": round(random.uniform(20.0, 30.0), 2)}
     try:
