@@ -12,5 +12,5 @@ COPY . .
 # Creamos la carpeta para la base de datos sqlite
 RUN mkdir -p /data
 
-# Comando de arranque adaptado a la variable PORT de Railway
-CMD uvicorn app:app --host 0.0.0.0 --port ${PORT:-8000}
+# Comando de arranque apuntando a main:app
+CMD ["sh", "-c", "uvicorn main:app --host 0.0.0.0 --port ${PORT:-8000}"]
